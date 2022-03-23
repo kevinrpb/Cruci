@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "convert": "node xd-2-json.js"
+  },
+  "dependencies": {
+    "xd-crossword-parser": "^0.1.2"
+  }
+}
