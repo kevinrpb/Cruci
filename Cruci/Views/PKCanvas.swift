@@ -28,7 +28,7 @@ struct PKCanvas: UIViewRepresentable {
         canvasView.tool = tool == .ink ? inkingTool : eraserTool
         canvasView.isOpaque = false
         canvasView.isScrollEnabled = false
-        canvasView.drawingPolicy = .anyInput
+        canvasView.drawingPolicy = .pencilOnly
 
         canvasView.becomeFirstResponder()
         canvasView.delegate = context.coordinator

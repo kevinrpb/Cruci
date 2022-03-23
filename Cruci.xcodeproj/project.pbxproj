@@ -12,9 +12,10 @@
 		D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449427EB069D001818C4 /* Assets.xcassets */; };
 		D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449727EB069D001818C4 /* Preview Assets.xcassets */; };
 		D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A127EB0825001818C4 /* PKCanvas.swift */; };
-		D7FC44A627EB344D001818C4 /* json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44A527EB344D001818C4 /* json */; };
 		D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A727EB34FE001818C4 /* Crossword.swift */; };
 		D7FC44AB27EB3ECC001818C4 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D7FC44AA27EB3ECC001818C4 /* Introspect */; };
+		D7FC44AD27EB4106001818C4 /* eltana-001.json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44AC27EB4106001818C4 /* eltana-001.json */; };
+		D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44AE27EB4929001818C4 /* CluesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		D7FC449427EB069D001818C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7FC449727EB069D001818C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7FC44A127EB0825001818C4 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
-		D7FC44A527EB344D001818C4 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json; path = crosswords/json; sourceTree = SOURCE_ROOT; };
 		D7FC44A727EB34FE001818C4 /* Crossword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword.swift; sourceTree = "<group>"; };
+		D7FC44AC27EB4106001818C4 /* eltana-001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "eltana-001.json"; sourceTree = "<group>"; };
+		D7FC44AE27EB4929001818C4 /* CluesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D7FC449227EB069A001818C4 /* ContentView.swift */,
+				D7FC44AE27EB4929001818C4 /* CluesListView.swift */,
 				D7FC44A127EB0825001818C4 /* PKCanvas.swift */,
 			);
 			path = Views;
@@ -105,7 +108,7 @@
 		D7FC44A427EB342B001818C4 /* Crosswords */ = {
 			isa = PBXGroup;
 			children = (
-				D7FC44A527EB344D001818C4 /* json */,
+				D7FC44AC27EB4106001818C4 /* eltana-001.json */,
 			);
 			path = Crosswords;
 			sourceTree = "<group>";
@@ -174,8 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FC44AD27EB4106001818C4 /* eltana-001.json in Resources */,
 				D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */,
-				D7FC44A627EB344D001818C4 /* json in Resources */,
 				D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */,
+				D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */,
 				D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */,
 				D7FC449327EB069A001818C4 /* ContentView.swift in Sources */,
 				D7FC449127EB069A001818C4 /* CruciApp.swift in Sources */,

@@ -16,37 +16,21 @@ enum Tool {
 struct ContentView: View {
     @Environment(\.undoManager) var undoManager
 
-    @State var listItemDrawing: Data? = nil
-    @State var drawingData: Data? = nil
+    @State var crossword: Crossword? = nil
+    @State var acrossListDrawingData: Data? = nil
+    @State var downListDrawingData: Data? = nil
+    @State var crosswordDrawingData: Data? = nil
 
     @State var tool: Tool = .ink
 
     var body: some View {
         NavigationView {
-            List {
-                Section {
-                    ZStack {
-                        Text("1. This is some long text that could simulate a clue (4)")
-                        PKCanvas(data: $listItemDrawing, tool: $tool)
-                    }
-                } header: {
-                    Text("Across")
-                }
-
-                Section {
-                    ZStack {
-                        Text("1. This is some long text that could simulate a clue (4)")
-                        PKCanvas(data: $listItemDrawing, tool: $tool)
-                    }
-                } header: {
-                    Text("Down")
-                }
-            }
-            .navigationTitle("Clues")
-            .navigationBarTitleDisplayMode(.inline)
+            CluesListView(crossword: $crossword, acrossListDrawingData: $acrossListDrawingData, downListDrawingData: $downListDrawingData, tool: $tool)
+                .navigationTitle("Clues")
+                .navigationBarTitleDisplayMode(.inline)
 
             ZStack {
-                PKCanvas(data: $drawingData, tool: $tool)
+                PKCanvas(data: $crosswordDrawingData, tool: $tool)
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
@@ -58,8 +42,6 @@ struct ContentView: View {
                     SelectEraserToolButton()
                 }
             }
-            .navigationTitle("Drawing")
-            .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
         .navigationViewStyle(.columns)
@@ -67,6 +49,11 @@ struct ContentView: View {
             splitVC.preferredDisplayMode = .oneBesideSecondary
             splitVC.presentsWithGesture = false
             splitVC.preferredSplitBehavior = .tile
+        }
+        .onAppear {
+            let c = Crossword.loadFromFile(named: "eltana-001")
+
+            crossword = c
         }
     }
 
@@ -112,11 +99,5 @@ struct ContentView: View {
             Label("Undo", systemImage: "arrow.uturn.forward")
         }
 //        .disabled(!(undoManager?.canRedo ?? false))
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
