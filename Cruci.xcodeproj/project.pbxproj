@@ -14,9 +14,17 @@
 		D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A127EB0825001818C4 /* PKCanvas.swift */; };
 		D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A727EB34FE001818C4 /* Crossword.swift */; };
 		D7FC44AB27EB3ECC001818C4 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D7FC44AA27EB3ECC001818C4 /* Introspect */; };
-		D7FC44AD27EB4106001818C4 /* eltana-001.json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44AC27EB4106001818C4 /* eltana-001.json */; };
 		D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44AE27EB4929001818C4 /* CluesListView.swift */; };
 		D7FC44B127EB4C9E001818C4 /* CrosswordGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */; };
+		D7FC44B727EB684D001818C4 /* CrosswordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44B627EB684D001818C4 /* CrosswordEntity.swift */; };
+		D7FC44BF27EB6A0E001818C4 /* eltana in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44B827EB6A0E001818C4 /* eltana */; };
+		D7FC44C027EB6A0E001818C4 /* nyherald in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44B927EB6A0E001818C4 /* nyherald */; };
+		D7FC44C127EB6A0E001818C4 /* bostonglobe in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44BA27EB6A0E001818C4 /* bostonglobe */; };
+		D7FC44C227EB6A0E001818C4 /* files.json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44BB27EB6A0E001818C4 /* files.json */; };
+		D7FC44C327EB6A0E001818C4 /* bequigley in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44BC27EB6A0E001818C4 /* bequigley */; };
+		D7FC44C427EB6A0E001818C4 /* nytimes in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44BD27EB6A0E001818C4 /* nytimes */; };
+		D7FC44C527EB6A0E001818C4 /* latimes in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44BE27EB6A0E001818C4 /* latimes */; };
+		D7FC44C727EB7093001818C4 /* CrosswordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44C627EB7093001818C4 /* CrosswordListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +35,17 @@
 		D7FC449727EB069D001818C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7FC44A127EB0825001818C4 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 		D7FC44A727EB34FE001818C4 /* Crossword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword.swift; sourceTree = "<group>"; };
-		D7FC44AC27EB4106001818C4 /* eltana-001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "eltana-001.json"; sourceTree = "<group>"; };
 		D7FC44AE27EB4929001818C4 /* CluesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesListView.swift; sourceTree = "<group>"; };
 		D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordGridView.swift; sourceTree = "<group>"; };
+		D7FC44B627EB684D001818C4 /* CrosswordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordEntity.swift; sourceTree = "<group>"; };
+		D7FC44B827EB6A0E001818C4 /* eltana */ = {isa = PBXFileReference; lastKnownFileType = folder; path = eltana; sourceTree = "<group>"; };
+		D7FC44B927EB6A0E001818C4 /* nyherald */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nyherald; sourceTree = "<group>"; };
+		D7FC44BA27EB6A0E001818C4 /* bostonglobe */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bostonglobe; sourceTree = "<group>"; };
+		D7FC44BB27EB6A0E001818C4 /* files.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = files.json; sourceTree = "<group>"; };
+		D7FC44BC27EB6A0E001818C4 /* bequigley */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bequigley; sourceTree = "<group>"; };
+		D7FC44BD27EB6A0E001818C4 /* nytimes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nytimes; sourceTree = "<group>"; };
+		D7FC44BE27EB6A0E001818C4 /* latimes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = latimes; sourceTree = "<group>"; };
+		D7FC44C627EB7093001818C4 /* CrosswordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D7FC449227EB069A001818C4 /* ContentView.swift */,
+				D7FC44C627EB7093001818C4 /* CrosswordListView.swift */,
 				D7FC44AE27EB4929001818C4 /* CluesListView.swift */,
 				D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */,
 				D7FC44A127EB0825001818C4 /* PKCanvas.swift */,
@@ -104,6 +121,7 @@
 			children = (
 				D7FC449027EB069A001818C4 /* CruciApp.swift */,
 				D7FC44A727EB34FE001818C4 /* Crossword.swift */,
+				D7FC44B627EB684D001818C4 /* CrosswordEntity.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -111,7 +129,13 @@
 		D7FC44A427EB342B001818C4 /* Crosswords */ = {
 			isa = PBXGroup;
 			children = (
-				D7FC44AC27EB4106001818C4 /* eltana-001.json */,
+				D7FC44BB27EB6A0E001818C4 /* files.json */,
+				D7FC44BC27EB6A0E001818C4 /* bequigley */,
+				D7FC44BA27EB6A0E001818C4 /* bostonglobe */,
+				D7FC44B827EB6A0E001818C4 /* eltana */,
+				D7FC44BE27EB6A0E001818C4 /* latimes */,
+				D7FC44B927EB6A0E001818C4 /* nyherald */,
+				D7FC44BD27EB6A0E001818C4 /* nytimes */,
 			);
 			path = Crosswords;
 			sourceTree = "<group>";
@@ -180,9 +204,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7FC44AD27EB4106001818C4 /* eltana-001.json in Resources */,
+				D7FC44C427EB6A0E001818C4 /* nytimes in Resources */,
 				D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */,
+				D7FC44BF27EB6A0E001818C4 /* eltana in Resources */,
+				D7FC44C527EB6A0E001818C4 /* latimes in Resources */,
 				D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */,
+				D7FC44C027EB6A0E001818C4 /* nyherald in Resources */,
+				D7FC44C127EB6A0E001818C4 /* bostonglobe in Resources */,
+				D7FC44C327EB6A0E001818C4 /* bequigley in Resources */,
+				D7FC44C227EB6A0E001818C4 /* files.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +227,10 @@
 				D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */,
 				D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */,
 				D7FC44B127EB4C9E001818C4 /* CrosswordGridView.swift in Sources */,
+				D7FC44B727EB684D001818C4 /* CrosswordEntity.swift in Sources */,
 				D7FC449327EB069A001818C4 /* ContentView.swift in Sources */,
 				D7FC449127EB069A001818C4 /* CruciApp.swift in Sources */,
+				D7FC44C727EB7093001818C4 /* CrosswordListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

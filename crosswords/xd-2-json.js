@@ -19,7 +19,7 @@ const getAllFiles = (dirPath, arrayOfFiles) => {
   return arrayOfFiles
 }
 
-getAllFiles('./xd')
+const files = getAllFiles('./xd')
   // Get only .xd files
   .filter((filepath) => filepath.endsWith('.xd'))
   // Get the path, name, and contents
@@ -47,8 +47,20 @@ getAllFiles('./xd')
   })
   // Check data is ok
   .filter(({ data }) => data != null)
-  // Write json files
+
+// Collect array of filenames
+const filesData = files.map(({ dirpath, filename, data }) => ({
+  filename: filename.replace(/\.json$/, ''),
+  subdirectory: dirpath.split('/json/')[1],
+  meta: data.meta
+}))
+
+// Write json files
+files
   .forEach(({ dirpath, filename, data }) => {
     fs.mkdirSync(dirpath, { recursive: true })
     fs.writeFileSync(path.join(dirpath, filename), JSON.stringify(data))
   })
+
+fs.writeFileSync(path.join('./json', 'files.json'), JSON.stringify(filesData))
+console.log(`Wrote ${filesData.length} files`)

@@ -26,7 +26,7 @@ struct CrosswordGridView: View {
                         ForEach(0..<crossword.grid[rowIndex].count) { columnIndex in
                             LetterCell(
                                 letter: crossword.grid[rowIndex][columnIndex],
-                                number: crossword.numbersGrid[rowIndex][columnIndex]
+                                number: crossword.numbersGrid![rowIndex][columnIndex]
                             )
                                 .tag("\(rowIndex)_\(columnIndex)")
                         }

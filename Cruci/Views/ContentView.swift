@@ -16,7 +16,11 @@ enum Tool {
 struct ContentView: View {
     @Environment(\.undoManager) var undoManager
 
+    @State var showSelectionSheet: Bool = false
+
+    @State var selectedFile: CrosswordFile? = nil
     @State var crossword: Crossword? = nil
+
     @State var acrossListDrawingData: Data? = nil
     @State var downListDrawingData: Data? = nil
     @State var crosswordDrawingData: Data? = nil
@@ -28,6 +32,12 @@ struct ContentView: View {
             CluesListView(crossword: $crossword, acrossListDrawingData: $acrossListDrawingData, downListDrawingData: $downListDrawingData, tool: $tool)
                 .navigationTitle("Clues")
                 .navigationBarTitleDisplayMode(.inline)
+                // This toolbar needs to go here since this list is the one attached to the primary Navigation VC
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        ShowCrosswordListButton()
+                    }
+                }
 
             ZStack {
                 if let crossword = crossword {
@@ -54,7 +64,31 @@ struct ContentView: View {
             splitVC.preferredSplitBehavior = .tile
         }
         .onAppear {
-            crossword = Crossword.loadFromFile(named: "eltana-001")
+            if selectedFile == nil {
+                showSelectionSheet = true
+            }
+        }
+        .onChange(of: selectedFile, perform: { newFile in
+            if let newFile = newFile {
+                crossword = newFile.loadCrossword()
+                print("Selected file \(newFile.filename)")
+            }
+        })
+        .sheet(isPresented: $showSelectionSheet) {
+            NavigationView {
+                CrosswordListView { file in
+                    selectedFile = file
+                }
+            }
+        }
+    }
+
+    private func ShowCrosswordListButton() -> some View {
+        Button {
+            showSelectionSheet = true
+        } label: {
+            Label("Crosswords", systemImage: "list.dash")
+                .padding(4)
         }
     }
 

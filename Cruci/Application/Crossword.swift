@@ -41,7 +41,9 @@ struct Crossword: Codable {
     let across: [Entry]
     let down: [Entry]
 
-    var numbersGrid: [[String]] {
+    var numbersGrid: [[String]]? = nil
+
+    mutating func generateNumbersGrid() {
         let nRows = grid.count
         let nColumns = grid[0].count
 
@@ -82,7 +84,7 @@ struct Crossword: Codable {
             }
         }
 
-        return baseGrid
+        numbersGrid = baseGrid
     }
 
     private func cell(rowIndex: Int, columnIndex: Int) -> String {
@@ -94,20 +96,47 @@ struct Crossword: Codable {
     }
 }
 
-extension Crossword {
-    static let jsonDecoder: JSONDecoder = {
+struct CrosswordFile: Codable, Equatable {
+    let filename: String
+    let subdirectory: String
+    let meta: Crossword.Meta
+
+    static func == (lhs: CrosswordFile, rhs: CrosswordFile) -> Bool {
+        lhs.filename == rhs.filename
+    }
+}
+
+extension CrosswordFile {
+    static private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
 
         return decoder
     }()
 
-    static func loadFromFile(named name: String) -> Crossword? {
-        guard let url = Bundle.main.url(forResource: name, withExtension: "json"),
+    static var all: [CrosswordFile] = {
+        guard let url = Bundle.main.url(forResource: "files", withExtension: "json"),
+              let content =  try? String(contentsOf: url),
+              let data = content.data(using: .utf8) else { return [] }
+
+        do {
+            let files = try jsonDecoder.decode([CrosswordFile].self, from: data)
+
+            return files
+        } catch {
+            print(error.localizedDescription)
+        }
+
+        return []
+    }()
+
+    func loadCrossword() -> Crossword? {
+        guard let url = Bundle.main.url(forResource: self.filename, withExtension: "json", subdirectory: self.subdirectory),
               let content =  try? String(contentsOf: url),
               let data = content.data(using: .utf8) else { return nil }
 
         do {
-            let crossword = try jsonDecoder.decode(Crossword.self, from: data)
+            var crossword = try Self.jsonDecoder.decode(Crossword.self, from: data)
+            crossword.generateNumbersGrid()
 
             return crossword
         } catch {
