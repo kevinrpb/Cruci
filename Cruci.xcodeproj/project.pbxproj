@@ -11,6 +11,7 @@
 		D7FC449327EB069A001818C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC449227EB069A001818C4 /* ContentView.swift */; };
 		D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449427EB069D001818C4 /* Assets.xcassets */; };
 		D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449727EB069D001818C4 /* Preview Assets.xcassets */; };
+		D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A127EB0825001818C4 /* PKCanvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D7FC449227EB069A001818C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7FC449427EB069D001818C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7FC449727EB069D001818C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7FC44A127EB0825001818C4 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,9 @@
 		D7FC448F27EB069A001818C4 /* Cruci */ = {
 			isa = PBXGroup;
 			children = (
-				D7FC449027EB069A001818C4 /* CruciApp.swift */,
-				D7FC449227EB069A001818C4 /* ContentView.swift */,
-				D7FC449427EB069D001818C4 /* Assets.xcassets */,
-				D7FC449627EB069D001818C4 /* Preview Content */,
+				D7FC44A027EB0718001818C4 /* Application */,
+				D7FC449F27EB0713001818C4 /* Views */,
+				D7FC449E27EB0700001818C4 /* Support Files */,
 			);
 			path = Cruci;
 			sourceTree = "<group>";
@@ -65,6 +66,32 @@
 				D7FC449727EB069D001818C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7FC449E27EB0700001818C4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC449427EB069D001818C4 /* Assets.xcassets */,
+				D7FC449627EB069D001818C4 /* Preview Content */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		D7FC449F27EB0713001818C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC449227EB069A001818C4 /* ContentView.swift */,
+				D7FC44A127EB0825001818C4 /* PKCanvas.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7FC44A027EB0718001818C4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC449027EB069A001818C4 /* CruciApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */,
 				D7FC449327EB069A001818C4 /* ContentView.swift in Sources */,
 				D7FC449127EB069A001818C4 /* CruciApp.swift in Sources */,
 			);
@@ -266,15 +294,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Cruci/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Cruci/Support Files/Preview Content\"";
 				DEVELOPMENT_TEAM = YUN383XGPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -295,15 +326,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Cruci/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Cruci/Support Files/Preview Content\"";
 				DEVELOPMENT_TEAM = YUN383XGPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +347,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
