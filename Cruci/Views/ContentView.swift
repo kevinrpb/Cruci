@@ -17,6 +17,9 @@ struct ContentView: View {
     @Environment(\.undoManager) var undoManager
 
     @State var showSelectionSheet: Bool = false
+    @State var showAnswerConfirmationAlert: Bool = false
+
+    @State var showAnswers: Bool = false
 
     @State var selectedFile: CrosswordFile? = nil
     @State var crossword: Crossword? = nil
@@ -41,7 +44,7 @@ struct ContentView: View {
 
             ZStack {
                 if let crossword = crossword {
-                    CrosswordGridView(crossword: crossword)
+                    CrosswordGridView(crossword: crossword, showAnswer: $showAnswers)
                         .padding()
                     PKCanvas(data: $crosswordDrawingData, tool: $tool)
                 }
@@ -50,6 +53,8 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .bottomBar) {
                     UndoButton()
                     RedoButton()
+                    Spacer()
+                    ShowAnswersButton()
                     Spacer()
                     SelectInkToolButton()
                     SelectEraserToolButton()
@@ -80,6 +85,20 @@ struct ContentView: View {
                     selectedFile = file
                 }
             }
+        }
+        .alert("Show answer", isPresented: $showAnswerConfirmationAlert) {
+            Button("Cancel", role: .cancel) {
+                showAnswerConfirmationAlert = false
+            }
+            Button("Confirm") {
+                showAnswerConfirmationAlert = false
+
+                withAnimation {
+                    showAnswers = true
+                }
+            }
+        } message: {
+            Text("Are you sure you want to show the answers?")
         }
     }
 
@@ -115,6 +134,21 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
                         .fill(tool == .eraser ? .blue.opacity(0.2) : .clear)
                 )
+        }
+    }
+
+    private func ShowAnswersButton() -> some View {
+        Button {
+            if showAnswers {
+                withAnimation {
+                    showAnswers = false
+                }
+            } else {
+                showAnswerConfirmationAlert = true
+            }
+        } label: {
+            Label("Answers", systemImage: showAnswers ? "lightbulb.fill" : "lightbulb")
+                .padding(4)
         }
     }
 

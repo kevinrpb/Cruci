@@ -10,6 +10,8 @@ import SwiftUI
 struct CrosswordGridView: View {
     let crossword: Crossword
 
+    @Binding var showAnswer: Bool
+
     // 30 is just "safe"
     @State private var cellSize: Double = 30
 
@@ -62,6 +64,7 @@ struct CrosswordGridView: View {
                     VStack {
                         Spacer()
                         Text(letter)
+                            .opacity(showAnswer ? 1 : 0)
                             .font(.caption)
                             .padding(2)
                     }
