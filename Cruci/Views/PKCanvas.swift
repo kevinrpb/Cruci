@@ -14,7 +14,7 @@ struct PKCanvas: UIViewRepresentable {
 
     private var canvasView: PKCanvasView
 
-    private let inkingTool: PKInkingTool = .init(.pen, color: .blue, width: 15)
+    private let inkingTool: PKInkingTool = .init(.pen, color: .blue, width: 12)
     private let eraserTool: PKEraserTool = .init(.vector)
 
     public init(data: Binding<Data?>, tool: Binding<Tool>) {

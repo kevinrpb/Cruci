@@ -30,14 +30,17 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
 
             ZStack {
-                PKCanvas(data: $crosswordDrawingData, tool: $tool)
+                if let crossword = crossword {
+                    CrosswordGridView(crossword: crossword)
+                        .padding()
+                    PKCanvas(data: $crosswordDrawingData, tool: $tool)
+                }
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     UndoButton()
                     RedoButton()
-                }
-                ToolbarItemGroup(placement: .status) {
+                    Spacer()
                     SelectInkToolButton()
                     SelectEraserToolButton()
                 }
@@ -51,9 +54,7 @@ struct ContentView: View {
             splitVC.preferredSplitBehavior = .tile
         }
         .onAppear {
-            let c = Crossword.loadFromFile(named: "eltana-001")
-
-            crossword = c
+            crossword = Crossword.loadFromFile(named: "eltana-001")
         }
     }
 

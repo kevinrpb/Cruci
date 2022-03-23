@@ -16,6 +16,7 @@
 		D7FC44AB27EB3ECC001818C4 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D7FC44AA27EB3ECC001818C4 /* Introspect */; };
 		D7FC44AD27EB4106001818C4 /* eltana-001.json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44AC27EB4106001818C4 /* eltana-001.json */; };
 		D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44AE27EB4929001818C4 /* CluesListView.swift */; };
+		D7FC44B127EB4C9E001818C4 /* CrosswordGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D7FC44A727EB34FE001818C4 /* Crossword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword.swift; sourceTree = "<group>"; };
 		D7FC44AC27EB4106001818C4 /* eltana-001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "eltana-001.json"; sourceTree = "<group>"; };
 		D7FC44AE27EB4929001818C4 /* CluesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesListView.swift; sourceTree = "<group>"; };
+		D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				D7FC449227EB069A001818C4 /* ContentView.swift */,
 				D7FC44AE27EB4929001818C4 /* CluesListView.swift */,
+				D7FC44B027EB4C9E001818C4 /* CrosswordGridView.swift */,
 				D7FC44A127EB0825001818C4 /* PKCanvas.swift */,
 			);
 			path = Views;
@@ -193,6 +196,7 @@
 				D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */,
 				D7FC44AF27EB4929001818C4 /* CluesListView.swift in Sources */,
 				D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */,
+				D7FC44B127EB4C9E001818C4 /* CrosswordGridView.swift in Sources */,
 				D7FC449327EB069A001818C4 /* ContentView.swift in Sources */,
 				D7FC449127EB069A001818C4 /* CruciApp.swift in Sources */,
 			);
