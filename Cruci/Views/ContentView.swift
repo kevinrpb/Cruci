@@ -119,7 +119,7 @@ struct ContentView: View {
                 .padding(4)
                 .background(
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
-                        .fill(tool == .ink ? .blue.opacity(0.2) : .clear)
+                        .fill(tool == .ink ? Color.accentColor.opacity(0.2) : .clear)
                 )
         }
     }
@@ -132,7 +132,7 @@ struct ContentView: View {
                 .padding(4)
                 .background(
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
-                        .fill(tool == .eraser ? .blue.opacity(0.2) : .clear)
+                        .fill(tool == .eraser ? Color.accentColor.opacity(0.2) : .clear)
                 )
         }
     }
@@ -147,7 +147,7 @@ struct ContentView: View {
                 showAnswerConfirmationAlert = true
             }
         } label: {
-            Label("Answers", systemImage: showAnswers ? "lightbulb.fill" : "lightbulb")
+            Label("Answers", systemImage: showAnswers ? "lightbulb" : "lightbulb.fill")
                 .padding(4)
         }
     }
