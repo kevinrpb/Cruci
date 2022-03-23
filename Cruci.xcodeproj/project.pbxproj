@@ -12,6 +12,9 @@
 		D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449427EB069D001818C4 /* Assets.xcassets */; };
 		D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC449727EB069D001818C4 /* Preview Assets.xcassets */; };
 		D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A127EB0825001818C4 /* PKCanvas.swift */; };
+		D7FC44A627EB344D001818C4 /* json in Resources */ = {isa = PBXBuildFile; fileRef = D7FC44A527EB344D001818C4 /* json */; };
+		D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC44A727EB34FE001818C4 /* Crossword.swift */; };
+		D7FC44AB27EB3ECC001818C4 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = D7FC44AA27EB3ECC001818C4 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		D7FC449427EB069D001818C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7FC449727EB069D001818C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7FC44A127EB0825001818C4 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
+		D7FC44A527EB344D001818C4 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = json; path = crosswords/json; sourceTree = SOURCE_ROOT; };
+		D7FC44A727EB34FE001818C4 /* Crossword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FC44AB27EB3ECC001818C4 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 				D7FC44A027EB0718001818C4 /* Application */,
 				D7FC449F27EB0713001818C4 /* Views */,
 				D7FC449E27EB0700001818C4 /* Support Files */,
+				D7FC44A427EB342B001818C4 /* Crosswords */,
 			);
 			path = Cruci;
 			sourceTree = "<group>";
@@ -90,8 +97,17 @@
 			isa = PBXGroup;
 			children = (
 				D7FC449027EB069A001818C4 /* CruciApp.swift */,
+				D7FC44A727EB34FE001818C4 /* Crossword.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		D7FC44A427EB342B001818C4 /* Crosswords */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC44A527EB344D001818C4 /* json */,
+			);
+			path = Crosswords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +126,9 @@
 			dependencies = (
 			);
 			name = Cruci;
+			packageProductDependencies = (
+				D7FC44AA27EB3ECC001818C4 /* Introspect */,
+			);
 			productName = Cruci;
 			productReference = D7FC448D27EB069A001818C4 /* Cruci.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +157,9 @@
 				Base,
 			);
 			mainGroup = D7FC448427EB0699001818C4;
+			packageReferences = (
+				D7FC44A927EB3ECC001818C4 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = D7FC448E27EB069A001818C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7FC449827EB069D001818C4 /* Preview Assets.xcassets in Resources */,
+				D7FC44A627EB344D001818C4 /* json in Resources */,
 				D7FC449527EB069D001818C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FC44A827EB34FE001818C4 /* Crossword.swift in Sources */,
 				D7FC44A227EB0825001818C4 /* PKCanvas.swift in Sources */,
 				D7FC449327EB069A001818C4 /* ContentView.swift in Sources */,
 				D7FC449127EB069A001818C4 /* CruciApp.swift in Sources */,
@@ -302,7 +326,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -334,7 +358,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -373,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7FC44A927EB3ECC001818C4 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7FC44AA27EB3ECC001818C4 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7FC44A927EB3ECC001818C4 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7FC448527EB0699001818C4 /* Project object */;
 }

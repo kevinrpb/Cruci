@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PencilKit
+import Introspect
 
 enum Tool {
     case ink, eraser
@@ -31,6 +32,15 @@ struct ContentView: View {
                 } header: {
                     Text("Across")
                 }
+
+                Section {
+                    ZStack {
+                        Text("1. This is some long text that could simulate a clue (4)")
+                        PKCanvas(data: $listItemDrawing, tool: $tool)
+                    }
+                } header: {
+                    Text("Down")
+                }
             }
             .navigationTitle("Clues")
             .navigationBarTitleDisplayMode(.inline)
@@ -51,6 +61,12 @@ struct ContentView: View {
             .navigationTitle("Drawing")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
+        }
+        .navigationViewStyle(.columns)
+        .introspectSplitViewController { splitVC in
+            splitVC.preferredDisplayMode = .oneBesideSecondary
+            splitVC.presentsWithGesture = false
+            splitVC.preferredSplitBehavior = .tile
         }
     }
 
